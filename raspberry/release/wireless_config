@@ -1,8 +1,8 @@
-wget  https://raw.githubusercontent.com/Tsher/CommonSetting/master/raspberry/release/8188eu_31024_614.zip
+#wget  https://raw.githubusercontent.com/Tsher/CommonSetting/master/raspberry/release/8188eu_31024_614.zip
 unzip 8188eu_31024_614.zip
-sudo mv 8188eu.ko /lib/modules/`uname -r`/kernel/drivers/net/wireless
-sudo chown root:root /lib/modules/`uname -r`/kernel/drivers/net/wireless/8188eu.ko
-sudo mv rtl8188eufw.bin /lib/firmware/rtlwifi/
-sudo chown root:root /lib/firmware/rtlwifi/rtl8188eufw.bin
-sudo depmod -a
-sudo modprobe 8188eu
+ mv 8188eu.ko /lib/modules/`uname -r`/kernel/drivers/net/wireless
+ chown root:root /lib/modules/`uname -r`/kernel/drivers/net/wireless/8188eu.ko
+ mv rtl8188eufw.bin /lib/firmware/rtlwifi/
+ chown root:root /lib/firmware/rtlwifi/rtl8188eufw.bin
+ depmod -a
+ modprobe 8188eu

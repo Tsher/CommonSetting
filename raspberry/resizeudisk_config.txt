@@ -1,0 +1,16 @@
+fdisk /dev/mmcblk0
+##type p to list the partition table
+##next type d to deletea partition
+##then type 2 and then type d again and then type 3 to delete the swap partition
+##now type n to create a new partition
+##this new partition needs to be a primary partition so type p
+##next enter 2 when prompted for a partition number
+##hit enter to accept the default twice
+##type w to save the changes you have made
+##type reboot
+
+resize2fs /dev/mmcblk0p2
+
+reboot
+
+df -lh
