@@ -1,0 +1,3 @@
+####config to disbale auto lock screen
+echo "xsetdpms 0 0 0"> /etc/profile.d/screen.sh
+echo "xsets off"    >> /etc/profile.d/screen.sh
